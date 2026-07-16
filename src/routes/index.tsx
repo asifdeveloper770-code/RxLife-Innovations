@@ -2,10 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Beaker, ShieldCheck, Sparkles, Dna, Microscope, Star } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { DnaField } from "@/components/site/DnaField";
-import logo from "@/assets/logo-primary.jpeg.asset.json";
-import vials from "@/assets/product-vials.jpeg.asset.json";
-import apparel from "@/assets/apparel.jpeg.asset.json";
-import brand from "@/assets/brand-guide.jpeg.asset.json";
+import logo from "@/assets/logo-primary.jpeg";
+import vials from "@/assets/product-vials.jpeg";
+import apparel from "@/assets/apparel.jpeg";
+import brand from "@/assets/brand-guide.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Science-driven wellness, premium education, and innovative longevity solutions designed for lifelong health optimization." },
       { property: "og:title", content: "Infinity RxLife — The Future of Longevity" },
       { property: "og:description", content: "Peptides. Performance. Longevity. A luxury biotechnology brand." },
-      { property: "og:image", content: vials.url },
+      { property: "og:image", content: vials },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -30,9 +30,9 @@ const CATEGORIES = [
 ];
 
 const PRODUCTS = [
-  { name: "Retatrutide", tag: "Metabolic", price: "Research grade", img: vials.url },
-  { name: "Epitalon", tag: "Longevity", price: "Research grade", img: vials.url },
-  { name: "Tesamorelin", tag: "Performance", price: "Research grade", img: vials.url },
+  { name: "Retatrutide", tag: "Metabolic", price: "Research grade", img: vials },
+  { name: "Epitalon", tag: "Longevity", price: "Research grade", img: vials },
+  { name: "Tesamorelin", tag: "Performance", price: "Research grade", img: vials },
 ];
 
 function HomePage() {
@@ -87,7 +87,7 @@ function HomePage() {
 
           <div className="lg:col-span-5 relative">
             <div className="relative aspect-square rounded-[2rem] overflow-hidden shadow-lux glass">
-              <img src={logo.url} alt="Infinity RxLife Logo" className="h-full w-full object-cover" />
+              <img src={logo} alt="Infinity RxLife Logo" className="h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-transparent" />
             </div>
             <div className="absolute -bottom-8 -left-8 w-56 rounded-2xl glass shadow-lux p-5 animate-float-slow hidden md:block">
@@ -154,7 +154,7 @@ function HomePage() {
         <div className="container-lux grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-lux">
-              <img src={vials.url} alt="Premium peptide vials" className="h-full w-full object-cover" />
+              <img src={vials} alt="Premium peptide vials" className="h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/70 to-transparent" />
             </div>
             <div className="absolute -bottom-8 -right-8 w-64 rounded-2xl glass shadow-lux p-6 hidden md:block">
@@ -238,7 +238,7 @@ function HomePage() {
           </div>
           <div className="order-1 lg:order-2 relative">
             <div className="aspect-[5/4] rounded-[2rem] overflow-hidden shadow-lux">
-              <img src={apparel.url} alt="Infinity RxLife apparel" className="h-full w-full object-cover" />
+              <img src={apparel} alt="Infinity RxLife apparel" className="h-full w-full object-cover" />
             </div>
           </div>
         </div>
@@ -302,7 +302,7 @@ function HomePage() {
       <section className="container-lux py-28">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden shadow-lux">
-            <img src={brand.url} alt="Infinity RxLife brand system" className="h-full w-full object-cover" />
+            <img src={brand} alt="Infinity RxLife brand system" className="h-full w-full object-cover" />
           </div>
           <div className="space-y-6">
             <div className="text-[11px] tracking-[0.32em] uppercase text-gold">Our Story</div>
